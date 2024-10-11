@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.css">
+  <title>Document</title>
+</head>
+<body>
+
+<form method="post">
+
+  <label for="">
+    <img src="/img/R.jfif" alt="">
+    <input type="radio" name="termek" id="" value="nissan" <%= data.termek == 'nissan' ? 'checked' : '' %>>Nissan
+  </label>
+  <label for="">
+    <img src="/img/190e.jfif" alt="">
+    <input type="radio" name="termek" id="" value="benz" <%= data.termek == 'benz' ? 'checked' : '' %>>Benz
+  </label>
+  <label for="">
+    <img src="/img/regera.jfif" alt="">
+    <input type="radio" name="termek" id="" value="regera" <%= data.termek == 'regera' ? 'checked' : '' %>>Regera
+  </label>
+  <br>
+
+  Név: <input type="text" name="nev" value="<%= data.nev %>"><br>
+  Kuponkód: <input type="text" name="kuponkod" value="<%= data.kuponkod %>">
+
+  <h2>Számlázás</h2>
+  Ország: <input type="text" name="szaml_orszag"><br>
+  Irányítószám: <input type="text" name="szaml_iranyito"><br>
+  Város: <input type="text" name="szaml_varos"><br>
+  Utca, házszám: <input type="text" name="szaml_cim">
+
+  <h2>Szállítás</h2>
+  Ország: <input type="text" name="szall_orszag"><br>
+  Irányítószám: <input type="text" name="szall_iranyito"><br>
+  Város: <input type="text" name="szall_varos"><br>
+  Utca, házszám: <input type="text" name="szall_cim">
+
+  <h2>Fizetés</h2>
+  Bankkártya: <input type="text" name="bankkaryta"><br>
+  Lejárati dátum: <input type="text" name="lajarat"><br>
+  Biztonsági kód: <input type="text" name="biztonsag">
+
+  <% for(let e of errors) { %> 
+      <div class="alert alert-danger"><%=e %></div>
+    
+    
+    <% } %>
+
+
+  <input type="submit" name="rendel">
+</form>
+
+  
+</body>
+</html>

@@ -1,0 +1,13 @@
+label {
+  display: inline;
+  img{
+    width: 300px
+  }
+}
+
+.alert-danger
+{
+  color: white;
+  background-color: rgb(233, 124, 0);
+}
+
