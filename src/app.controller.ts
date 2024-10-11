@@ -43,4 +43,11 @@ export class AppController {
       })
     }
   }
+
+
+  @Get('orderSuccess')
+  @Render('success')
+  success(){
+    
+  }
 }
